@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHAT WE DO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            white-space: nowrap;
+            transition: transform 0.5s ease;
+            width: 300%;
+            /* Adjust according to the number of slides */
+            position: relative;
+        }
+
+        .slide {
+            display: inline-block;
+            width: 150px;
+            padding: 5px;
+            /* Adjust according to the number of slides */
+            vertical-align: top;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .navigation-dots {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #555;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #ff0000;
+        }
+
+        .read-more {
+            position: absolute;
+            bottom: 14px;
+            /* Adjust position from the bottom */
+            left: 16%;
+            /* Place the button in the center horizontally */
+            transform: translateX(-50%);
+            /* Center horizontally */
+            background-color: #ffffff;
+            /* Button background color */
+            color: #ff0000;
+            /* Button text color */
+            padding: 4px;
+            /* Padding around button text */
+            border: none;
+            /* Remove border */
+            border-radius: 0px;
+            /* Add some border radius for styling */
+            cursor: pointer;
+            /* Show pointer cursor on hover */
+        }
+
+        .slide:hover .read-more {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-container text-left">
+        <p class="para1">WHAT WE DO</p>
+        <h1>SERVICES PROVIDE FOR YOU</h1>
+        <p>Morbi sed lacus nec risus fininus feugiat et fermentum nibh, Pellentesque
+            vitae ante at olit fringilla ac at purus, Morbi sed lacus nec risus finibus
+            feugiat at fermentum</p>
+        <div class="slider">
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhZg4oNVIMRxM_TC-eud00wfUIW3sEWMIQg&s" />
+            </div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg5bdgcqFBapxrBAZGduIc0Q0l1h52KeaNBw&s" />
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTRNPproQHtjXgpgoUqYo0D36jFTQ9NMrTww&s" />
+                <button class="read-more text-center">Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </button>
+            </div>
+            <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCLzKOAqaVRNfItc2aJhPNU00tKgJiHAi5Pg&s" />
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="navigation-dots"></div>
+        <a href="https://projectfyle.ccbp.tech/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+            </svg>Back</a>
+
+        <a class="righti" href="https://projectpagee3.ccbp.tech/">Next<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+            </svg></a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            const slider = $('.slider');
+            const dotsContainer = $('.navigation-dots');
+
+            // Create navigation dots
+            for (let i = 0; i < slider.children().length; i++) {
+                dotsContainer.append('<span class="dot"></span>');
+            }
+
+            const dots = $('.dot');
+            let currentSlide = 0;
+            showSlide(currentSlide);
+
+            dots.click(function() {
+                showSlide($(this).index());
+            });
+
+            function showSlide(slideIndex) {
+                if (slideIndex < 0 || slideIndex >= slider.children().length) return;
+                slider.css('transform', `translateX(-${slideIndex * 100}%)`);
+                currentSlide = slideIndex;
+                updateDots();
+            }
+
+            function updateDots() {
+                dots.removeClass('active').eq(currentSlide).addClass('active');
+            }
+
+            // Open 'fylehq.com' on button click
+            $('.read-more').click(function() {
+                window.open('https://fylehq.com', '_blank');
+            });
+        });
+    </script>
+</body>
+
+</html>

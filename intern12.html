@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <a class="navbar-brand" href="#">
+            <img class="image" src="https://www.logodesign.net/images/home-industry/marketing-logo-05.jpg" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="https://projectfyle.ccbp.tech/">
+                    AWARD WINING
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link" href="https://projectpage2.ccbp.tech/">WHAT WE DO</a>
+                <a class="nav-link" href="https://projectpagee3.ccbp.tech/">OUR PROJECT</a>
+                <a class="nav-link" href="https://projectpagee4.ccbp.tech/">EXPERTS GROWTHS</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Hero Section -->
+        <div class="hero-section text-left">
+            <p>AWARD WINNING</p>
+            <h1>DIGITAL MARKETING AGENCY</h1>
+            <p>Morbi sed lacus nec risus fininus feugiat et fermentum nibh, Pellentesque
+                vitae ante at olit fringilla ac at purus, Morbi sed lacus nec risus finibus
+                feugiat at fermentum</p>
+            <button id="contactUsBtn" class="btn btn-danger">Contact Us</button>
+        </div>
+        <img src="https://creativewebsitemarketing.com/wp-content/uploads/how-to-choose-digital-marketing-agency-1024x576.png" width="400" height="400" />
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Talk to us</h2>
+            <form action="https://getform.io/f/wbrkjvea" method="POST">
+                <div class="form-group">
+                    <label for="email">Work email*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full name*</label>
+                    <input type="text" class="form-control" id="name" name="full name" required>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                    <label for="checkbox1">I agree to Fyle's terms nad conditions, and provide
+                        consent to send me communication.</label>
+                </div>
+                <button type="submit" class="button-container btn-danger">Contact Us</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
